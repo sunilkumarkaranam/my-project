@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/@atlaskit/css-reset@2.0.0/dist/bundle.css" media="all">
+	<script src="https://connect-cdn.atl-paas.net/all.js"></script>
+	<title>Story Points</title>
+</head>
+
+<body>
+
+	<h1>StoryPoints</h1>
+	<table style="border:solid 1px black;">
+		<thead>
+			<tr>
+				<th>IssueKey</th>
+				<th>StoryPoints</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="l: ${list}">
+				<td th:text="${l.issueKey}" />
+				<td th:text="${l.storyPoint}" />
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

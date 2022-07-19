@@ -1,0 +1,30 @@
+{
+  "key": "com.thanh.connect.springboot.hellobosch",
+  "baseUrl": "${addon.base-url}",
+ 
+  "name": "Hellobosch",
+  "authentication": {
+    "type": "jwt"
+  },
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+"scopes": ["READ","ACT_AS_USER"],
+  "apiVersion": 1,
+
+
+  "modules": {
+    "generalPages": [
+
+      {
+        "url": "/helloworld",
+        "key": "callapi",
+        "location": "system.top.navigation.bar",
+        "name": {
+          "value": "List issue - Spring Boot"
+        }
+      }
+    ]
+  }
+}
